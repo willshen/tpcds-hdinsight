@@ -1,5 +1,12 @@
 # tpcds-datagen-as-hive-query
-Generate TPCDS data using hive query
+
+Goal of this project is to help generate TPCDS data with hive and create your own HDInsight benchmarks for various engines 
+
+1. Hive
+2. Interactive Hive(LLAP)
+3. Spark
+4. Presto
+
 
 ## How to use with Hive CLI
 
