@@ -13,7 +13,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
 1. Clone this repo.
 
     ```shell
-    git clone https://github.com/dharmeshkakadia/tpcds-datagen-as-hive-query/ && cd tpcds-datagen-as-hive-query
+    git clone https://github.com/hdinsight/tpcds-datagen-as-hive-query/ && cd tpcds-datagen-as-hive-query
     ```
 2. Run TPCDSDataGen.hql with settings.hql file and set the required config variables.
     ```shell
@@ -49,7 +49,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
 1. Clone this repo.
 
     ```shell
-    git clone https://github.com/dharmeshkakadia/tpcds-datagen-as-hive-query/ && cd tpcds-datagen-as-hive-query
+    git clone https://github.com/hdinsight/tpcds-datagen-as-hive-query/ && cd tpcds-datagen-as-hive-query
     ```
 
 2. Upload the resources to DFS.
