@@ -1,4 +1,4 @@
-# tpcds-datagen-as-hive-query
+# tpcds-hdinsight
 
 Goal of this project is to help generate TPCDS data with hive and create your own HDInsight benchmarks for various engines 
 
@@ -13,7 +13,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
 1. Clone this repo.
 
     ```shell
-    git clone https://github.com/hdinsight/tpcds-datagen-as-hive-query/ && cd tpcds-datagen-as-hive-query
+    git clone https://github.com/hdinsight/tpcds-hdinsight/ && cd tpcds-hdinsight
     ```
 2. Run TPCDSDataGen.hql with settings.hql file and set the required config variables.
     ```shell
@@ -49,7 +49,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
 1. Clone this repo.
 
     ```shell
-    git clone https://github.com/hdinsight/tpcds-datagen-as-hive-query/ && cd tpcds-datagen-as-hive-query
+    git clone https://github.com/hdinsight/tpcds-hdinsight && cd tpcds-hdinsight
     ```
 
 2. Upload the resources to DFS.
@@ -123,7 +123,7 @@ If you want to run all the queries 10 times and measure the times it takes, you 
 for f in queries/*.sql; do for i in {1..10} ; do STARTTIME="`date +%s`";  beeline -u "jdbc:hive2://`hostname -f`:10002/tpcds_orc;transportMode=http" -i sparksettings.hql -f $f  > $f.run_$i.out 2>&1 ; SUCCESS=$? ; ENDTIME="`date +%s`"; echo "$f,$i,$SUCCESS,$STARTTIME,$ENDTIME,$(($ENDTIME-$STARTTIME))" >> times_orc.csv; done; done;
    ```
 
-#### How do I run the queries with [Presto](https://github.com/dharmeshkakadia/presto-hdinsight)?
+#### How do I run the queries with [Presto](https://github.com/hdinsight/presto-hdinsight)?
    
    ```
    presto --schema tpcds_orc -f queries/query12.sql
