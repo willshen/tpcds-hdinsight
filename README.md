@@ -17,7 +17,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
     ```
 2. Run TPCDSDataGen.hql with settings.hql file and set the required config variables.
     ```shell
-    hive -i settings.hql -f TPCDSDataGen.hql -hiveconf SCALE=10 -hiveconf PARTS=10 -hiveconf LOCATION=/HiveTPCDS/ -hiveconf TPCHBIN=resources 
+    /usr/bin/hive -i settings.hql -f TPCDSDataGen.hql -hiveconf SCALE=10 -hiveconf PARTS=10 -hiveconf LOCATION=/HiveTPCDS/ -hiveconf TPCHBIN=resources 
     ```
     Here, 
     
@@ -31,7 +31,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
 
 3. Now you can create tables on the generated data.
     ```shell
-    hive -i settings.hql -f ddl/createAllExternalTables.hql -hiveconf LOCATION=/HiveTPCDS/ -hiveconf DBNAME=tpcds
+    /usr/bin/hive -i settings.hql -f ddl/createAllExternalTables.hql -hiveconf LOCATION=/HiveTPCDS/ -hiveconf DBNAME=tpcds
     ```
     Generate ORC tables and analyze
     ```shell
@@ -41,7 +41,7 @@ Goal of this project is to help generate TPCDS data with hive and create your ow
 
 4. Run the queries !
     ```shell
-    hive -database tpcds_orc -i settings.hql -f queries/query12.sql 
+    /usr/bin/hive -database tpcds_orc -i settings.hql -f queries/query12.sql 
     ```
 
 ## How to use with Beeline CLI
